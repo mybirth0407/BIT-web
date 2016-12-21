@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    var d = new Date();
+    console.log(d);
+    document.write(d);
+
+    /**
+     * 2016-4-1
+     */
+    var d2 = new Date(2016, 3, 1);
+    console.log(d2);
+
+    /**
+     * 2016-4-1
+     */
+    var d3 = new Date(2016, 3, 1, 10);
+    console.log(d3);
+
+    /**
+     * 2016-4-1 10:30:30
+     */
+    var d4 = new Date(2016, 3, 1, 10, 30, 30);
+    console.log(d4);
+
+    /**
+     * 1970-01-01 00:00:00 부터 시작한 밀리초
+     */
+    var d5 = new Date(200000 * 1000);
+    console.log(d5);
+    console.log(
+      (d2.getYear() + 1900) + "년" +
+      (d2.getMonth() + 1) + "월" +
+      (d2.getDate()) + "일" +
+      (d2.getHours()) + ":" +
+      (d2.getMinutes()) + ":" +
+      (d2.getSeconds()));
+  </script>
+</head>
+<body>
+</body>
+</html>

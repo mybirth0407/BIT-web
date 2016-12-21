@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    var func1 = function(arg1, arg2, arg3) {
+      console.log(arg1);
+      console.log(arg2["name"] + ":" + arg2.age);
+      arg3();
+    }
+
+    func1(10, {name: "안대혁", age:43}, function() {
+      console.log("called");
+    }, (function() {
+      return 10;;
+    })());
+
+    (function(a, b, c) {
+      console.log(a, b, c);
+    })(10, 20, 30);
+
+    var func2 = function() {
+      var sum = 0;
+      var length = arguments.length;
+
+      for (var i = 0; i < length; i++) {
+        sum += arguments[i];
+      }
+
+      return sum;
+    }
+
+    console.log(func2(10, 50, "하하"));
+    console.log(func2("허허" + 10, 50, "하하"));
+  </script>
+</head>
+<body>
+</body>
+</html>

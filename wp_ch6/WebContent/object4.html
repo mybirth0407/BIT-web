@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    /**
+     * prototpye 기반의 생성자를 사용한 객체 생성
+     */
+    var employee = function(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+
+    employee.prototype.companyName = "이스트소프트";
+    employee.prototype.showinfo = function() {
+      console.log(this.name + ": " + this.age + ": " + this.companyName);
+    }
+
+    var employee1 = new employee("다다담", 23);
+    console.log(employee1 + ": " + typeof employee1);
+
+    employee1.companyName = "꾸꺄까끄깎";
+    employee1.showinfo();
+
+    var employee2 = new employee("도도동", 23);
+    employee2.showinfo = function() {
+      console.log(this.name);
+    }
+    employee2.showinfo();
+
+  </script>
+</head>
+<body>
+</body>
+</html>

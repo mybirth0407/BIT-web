@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+  <script>
+    var str = "this is a string";
+    var length = str.length;
+
+    for (var i = 0; i < length; i++) {
+      console.log(str[i]);
+    }
+
+    var str1 = "number" + 5;
+    console.log(str1);
+
+    var n = "5" + 5;
+    console.log(n)
+
+    var str2 = "string1 string2 string3";
+    console.log(str2.indexOf("string2"));
+
+    var str3 = str2.substr(8);
+    console.log(str3);
+
+    /**
+     * startIndex, count
+     */
+    var str4 = str.substr(8, 14);
+    console.log(str4);
+
+    /**
+     * stratIndex, lastIndex - 1
+     */
+    var str5 = str.substring(8, 14);
+    console.log(str5);
+
+    var tokens = str2.split("");
+    console.log(tokens);
+
+    /**
+     * global fucntion
+     */
+    var escapeHTML = function(str) {
+      return str.replace(/>/g, "&gt;").replace(/</g, "&lt;");
+    }
+
+    /*
+     * String object's function expand prototype
+     */
+    String.prototype.escapeHTML = function() {
+      return this.replace(/>/g, "&gt;").replace(/</g, "&lt;");
+    }
+
+    var onLoaded = function() {
+      var html ="<h3>here's a headline!</h3>";
+//      document.getElementById("myDiv").innerHTML = escapeHTML(html);
+      document.getElementById("myDiv").innerHTML = html.escapeHTML();
+      console.log(html);
+    }
+
+  </script>
+</head>
+<body onload="onLoaded()">
+<div id="myDiv">
+  <!--<h3>here's a headline!</h3>-->
+  &lt;h3&gt;here's a headline!&lt;/h3&gt;
+</div>
+<div>
+  a &lt; 100 = true;
+</div>
+</body>
+</html>

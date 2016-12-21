@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+  <script type="text/javascript">
+
+    var displayDate = function() {
+      document.getElementById("demo").innerHTML = Date();
+    }
+
+    var disappearDate = function() {
+      document.getElementById("demo").innerHTML = "";
+    }
+
+    window.onload = function() {
+      var btn = document.getElementById("myBtn");
+      btn.onmouseover = displayDate
+      btn.onmouseout = disappearDate;
+    }
+
+    console.log(navigator.userAgent);
+    console.log(navigator.cookieEnabled);
+
+    window.unload = function() {
+      alert("으아아아앆");
+    }
+  </script>
+</head>
+<body>
+<p>버튼을 클릭하면 <em>displayDate()</em> 함수가 실행 됩니다.</p>
+<button id="myBtn">Try it</button>
+<p id="demo"></p>
+</body>
+</html>

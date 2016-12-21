@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+  <script>
+    function randomColor() {
+      var color = "#" + Math.round(Math.random() * 0xFFFFFC).toString(16);
+      return color;
+    }
+
+    function defaultColor(obj) {
+      obj.style.backgroundColor = randomColor();
+      obj.innerHTML = "마우스 갖다대라!";
+    }
+
+    function changeColor(obj) {
+      obj.style.backgroundColor = randomColor();
+      obj.innerHTML = "색깔변함!<br>클릭하세요!";
+    }
+
+    function mouseDown(obj) {
+      obj.style.backgroundColor = randomColor();
+      obj.innerHTML = "버튼을 떼주세요.";
+    }
+
+    function mouseUp(obj) {
+      obj.style.backgroundColor = randomColor();
+      obj.innerHTML = "한번 눌렀네!<br>밖으로 빼";
+    }
+  </script>
+</head>
+<body>
+<div onmousedown="mouseDown(this)"
+     onmouseup="mouseUp(this)"
+     onmouseover="changeColor(this)"
+     onmouseout="defaultColor(this)" ;
+     style="background-color:#D94A38;width:100px;height:20px;padding:40px;">
+  클릭하세요!
+</div>
+</body>
+</html>

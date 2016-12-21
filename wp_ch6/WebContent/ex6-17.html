@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+  <script >
+    var changeText = function() {
+      var el = document.getElementById("my-h1");
+      el.innerHTML = "Ooops!";
+    }
+  </script>
+</head>
+<body>
+<h1 id="my-h1" onclick="this.innerHTML='Ooops!';">Click on this text!</h1>
+<h1 id="my-h2" onclick="this.innerHTML='Ooops!';">Click on this text!</h1>
+<!--<h1 onclick="changeText(this)">Click on this text!</h1>-->
+</body>
+</html>

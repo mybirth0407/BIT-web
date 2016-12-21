@@ -1,0 +1,11 @@
+@charset "utf-8";
+/*
+  main.css 입니다.
+*/
+body {
+  padding: 0;
+  margin: 10px;
+  font-size: 12px;
+  font-family: Arial, Helvertica, sans-serif;
+  color: #333
+}
